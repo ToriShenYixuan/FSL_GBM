@@ -92,20 +92,21 @@ parser.add_argument('--pretrain', default=None,
                                         help='folder of the model to load')
 args = parser.parse_args()
 
-free_gpu_id = get_free_gpu()
-os.environ['CUDA_VISIBLE_DEVICES'] = str(free_gpu_id)
+#free_gpu_id = get_free_gpu()
+#os.environ['CUDA_VISIBLE_DEVICES'] = str(free_gpu_id)
 
 def _get_model(config):
     m = get_model(
                     args.model,
                     config,
                     args.dataset)
-    return m.cuda()
+    #return m.cuda()
+    return m
 
 def gen_id(config):
     return "{}_{}_{}_{}_{}-{:03d}".format(
-            'label-ratio-'+str(args.label_ratio).replace(".","-"),
-            'mode-ratio-'+str(args.mode_ratio).replace(".","-"),
+            'label-ratio-'+str(args.label_ratio).replace(".", "-"),
+            'mode-ratio-'+str(args.mode_ratio).replace(".", "-"),
             config.name,
             'num-unlabel-' + str(args.num_unlabel),
             datetime.datetime.now().isoformat(chr(ord("-"))).replace(":","-").replace( ".", "-"),
@@ -219,7 +220,7 @@ def train(config,
 
 def main(args):
     torch.manual_seed(args.seed)
-    torch.cuda.manual_seed(args.seed)
+    #torch.cuda.manual_seed(args.seed)
     np.random.seed(args.seed)
     random.seed(args.seed)
     if args.num_test == -1 and (args.dataset == "tiered-imagenet" or

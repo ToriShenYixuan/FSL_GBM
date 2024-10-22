@@ -152,6 +152,9 @@ class OmniglotDataset(RefinementMetaDataset):
       aug_90: Bool. Whether to augment the training data by rotating 90 degrees.
       seed: Int. Random seed.
     """
+    self._multimodal = False  # Initialize multimodal attribute
+    if hasattr(args, 'multimodal'):
+      self._multimodal = args.multimodal  # If args contain multimodal setting, update it
     self._folder = folder
     self._aug_90 = aug_90
     self._split_def = split_def
