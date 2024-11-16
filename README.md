@@ -25,22 +25,17 @@ Our method consistently enhances the performance of both the original Prototypic
 
 To motivate our approach, consider the example in the figure below. Traditional Prototypical Networks are sensitive to noisy and heterogeneous data, such as variations in collected brain orientations (e.g., coronal, sagittal, and axial orientations). This often leads to biased prototypes that fail to capture the true distinguishing features of classes, resulting in misclassification.
 
-<table class="center">
-    <tr>
-        <td width=100% style="border: none"><img src="assets/ex.png" style="width:100%"></td>
-    </tr>
-    <tr>
-        <td width="100%" style="border: none; text-align: center; word-wrap: break-word">Motivating Example: Challenges faced by traditional Prototypical Networks under noise and bias.</td>
-    </tr>
-</table>
+![Motivating Example](assets/ex.png)
+*Motivating Example: Challenges faced by traditional Prototypical Networks under noise and bias.*
 
 To address these challenges, we propose a **Noise-Resilient Sampling Framework**. Our method optimizes prototype formation through an iterative process that selects representative support samples, reduces noise impact, and improves resilience to data heterogeneity. Key steps include support set refinement, prototype scoring with a validation set, and iterative updates to enhance classification performance.
 
-<p align="justify">
-    <img src="assets/algorithm.png" align="right" width="40%" style="margin-left: 15px; margin-bottom: 10px;">
-    By iteratively refining the support set and using validation scores, our framework ensures prototypes are robust to noise and bias. This process enhances the performance of both Prototypical Networks and Infinite Prototypical Networks (IMP), consistently improving classification accuracy across heterogeneous datasets.
-</p>
-
+<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 15px;">
+    <img src="assets/algorithm.png" style="width: 45%; min-width: 250px;">
+    <p style="width: 50%; text-align: justify;">
+        By iteratively refining the support set and using validation scores, our framework ensures prototypes are robust to noise and bias. This process enhances the performance of both Prototypical Networks and Infinite Prototypical Networks (IMP), consistently improving classification accuracy across heterogeneous datasets. The algorithm shown outlines the Noise-Resilient Sampling process. It begins by randomly selecting a support set, forming prototypes, and evaluating their performance on a validation set. This process iteratively refines the support set until an optimal configuration is reached.
+    </p>
+</div>
 
 
 ## Result
