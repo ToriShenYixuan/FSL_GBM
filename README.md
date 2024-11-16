@@ -16,9 +16,6 @@ Our method consistently enhances the performance of both the original Prototypic
     <tr>
         <td width=100% style="border: none"><img src="assets/pip.png" style="width:100%"></td>
     </tr>
-    <tr>
-        <td width="100%" style="border: none; text-align: center; word-wrap: break-word">Overview of our Thought Retriever</td>
-    </tr>
 </table>
 
 ## Algorithm
