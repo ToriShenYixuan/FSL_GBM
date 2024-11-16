@@ -30,12 +30,10 @@ To motivate our approach, consider the example in the figure below. Traditional 
 
 To address these challenges, we propose a **Noise-Resilient Sampling Framework**. Our method optimizes prototype formation through an iterative process that selects representative support samples, reduces noise impact, and improves resilience to data heterogeneity. Key steps include support set refinement, prototype scoring with a validation set, and iterative updates to enhance classification performance.
 
-<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 15px;">
-    <img src="assets/algorithm.png" style="width: 45%; min-width: 250px;">
-    <p style="width: 50%; text-align: justify;">
-        By iteratively refining the support set and using validation scores, our framework ensures prototypes are robust to noise and bias. This process enhances the performance of both Prototypical Networks and Infinite Prototypical Networks (IMP), consistently improving classification accuracy across heterogeneous datasets. The algorithm shown outlines the Noise-Resilient Sampling process. It begins by randomly selecting a support set, forming prototypes, and evaluating their performance on a validation set. This process iteratively refines the support set until an optimal configuration is reached.
-    </p>
-</div>
+![Algo](assets/algo.png)
+
+By iteratively refining the support set and using validation scores, our framework ensures prototypes are robust to noise and bias. This process enhances the performance of both Prototypical Networks and Infinite Prototypical Networks (IMP), consistently improving classification accuracy across heterogeneous datasets. The algorithm shown outlines the Noise-Resilient Sampling process. It begins by randomly selecting a support set, forming prototypes, and evaluating their performance on a validation set. This process iteratively refines the support set until an optimal configuration is reached.
+
 
 
 ## Result
